@@ -1,5 +1,6 @@
 package com.devsuperior.dslearnbds.entities;
 
+import java.io.Serializable;
 import java.time.Instant;
 import java.util.HashSet;
 import java.util.Set;
@@ -14,7 +15,9 @@ import com.devsuperior.dslearnbds.entities.pk.EnrollmentPK;
 
 @Entity
 @Table(name = "tb_enrollment")
-public class Enrollment {
+public class Enrollment implements Serializable {
+	
+	private static final long serialVersionUID = 1L;
 	
 	@EmbeddedId
 	private EnrollmentPK id = new EnrollmentPK();
